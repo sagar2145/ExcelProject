@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- SQL Dialect -->
+<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="connection.url">jdbc:mysql://localhost:3306/excel</property>
+<property name="connection.user">root</property>
+<property name="connection.password">Thinkpad@123</property>
+<property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+ 
+<property name="hibernate.connection.pool_size">5</property>
+<property name = "hibernate.jdbc.batch_size">50 </property>
+
+<property name="hibernate.show_sql">true</property>
+<property name="hibernate.format_sql">true</property>
+<property name="hibernate.cache.use_second_level_cache">false</property>
+<property name="hibernate.hbm2ddl.auto">update</property>
+
+<mapping class="com.excel.entity.StudentInfo"/>
+<mapping class="com.excel.entity.ClassA"/>
+<mapping class="com.excel.entity.ClassB"/>
+<mapping class="com.excel.entity.ClassC"/>
+<mapping class="com.excel.entity.Sample"/>
+
+
+
+    </session-factory>
+</hibernate-configuration>
